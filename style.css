@@ -21,8 +21,8 @@ body{
 }
 
 .carta{
-    width: 550px;
-    height: 800px;
+    width: 400px;
+    height: 650px;
     border: solid 3px black;
     border-radius: 10px;
     background-color: rgb(230, 245, 174);
@@ -172,6 +172,6 @@ input{
 }
 
 td, tr{
-    padding: 10px;
+    padding: 5px;
     padding-top: 4%;
 }

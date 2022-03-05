@@ -12,9 +12,8 @@
     <title>Cartitas</title>
 </head>
 
-<!-- EMPIEZA NAVBAR -->
-
 <body>
+    <!-- EMPIEZA NAVBAR -->
     <ul class="nav justify-content-center">
         <li class="nav-item">
             <a class="nav-link" href="#">Active</a>
@@ -38,33 +37,54 @@
                     <table>
                         <tr>
                             <td class="formTagTable"><span>Name</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
+                            <td><input type="text" name="" id="inputName" placeholder="Name" onchange="updateInput('inputName')"></td>
                             <td class="formTagTable"><span class="formTag">Rarity</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
+                            <td><input type="text" name="" id="inputRarity" placeholder="Rarity" onchange="updateInput('inputRarity')"></td>
                         </tr>
                         <tr>
                             <td class="formTagTable"><span>Race</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
+                            <td><input type="text" name="" id="inputRace" placeholder="Race"  onchange="updateInput('inputRace')"></td>
                             <td class="formTagTable"><span>Class</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
+                            <td><input type="text" name="" id="inputClass" placeholder="Class"  onchange="updateInput('inputClass')"></td>
                         </tr>
                         <tr>
                             <td class="formTagTable"><span>Type</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
+                            <td>
+                                <select class="formTagTableSelect" id="inputType" onchange="updateInput('inputType')">
+                                    <option value="./assets/typeIcons/bendalloy.png">Bendalloy</option>
+                                    <option value="./assets/typeIcons/brass.png">Brass</option>
+                                    <option value="./assets/typeIcons/bronze.png">Bronze</option>
+                                    <option value="./assets/typeIcons/cadmium.png">Cadmium</option>
+                                    <option value="./assets/typeIcons/copper.png">Copper</option>
+                                    <option value="./assets/typeIcons/electrum.png">Electrum</option>
+                                    <option value="./assets/typeIcons/gold.png">Gold</option>
+                                    <option value="./assets/typeIcons/iron.png">Iron</option>
+                                    <option value="./assets/typeIcons/pewter.png">Pewter</option>
+                                    <option value="./assets/typeIcons/steel.png">Steel</option>
+                                    <option value="./assets/typeIcons/tin.png">Tin</option>
+                                    <option value="./assets/typeIcons/zinc.png">Zinc</option>
+                                </select>
+                            </td>
                             <td class="formTagTable"><span>Mana</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
+                            <td><input type="number" name="" id="inputMana" placeholder="Mana"  onchange="updateInput('inputMana')"></td>
                         </tr>
                         <tr>
                             <td class="formTagTable"><span>Health</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
+                            <td><input type="number" name="" id="inputHealth" placeholder="Health"  onchange="updateInput('inputHealth')"></td>
                             <td class="formTagTable"><span>Strenght</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
+                            <td><input type="number" name="" id="inputStrength" placeholder="Strenght"  onchange="updateInput('inputStrength')"></td>
                         </tr>
                         <tr>
                             <td class="formTagTable"><span>Abilities</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
-                            <td class="formTagTable"><span>Strenght</span></td>
-                            <td><input type="text" name="" id="" placeholder="hola"></td>
+                            <td><input type="text" id="inputAbilities" placeholder="Abilities"  onchange="updateInput('inputAbilities')"></td>
+                            <td></td>
+                            <td><Button class="abilityButton">+</Button><Button class="abilityButton">-</Button></td>
+                        </tr>
+                        <tr>
+                            <td class="formTagTable"><span>Image</span></td>
+                            <td><input type="file" id="inputImage" onchange="updateInput('inputImage')"></td>
+                            <td></td>
+                            <td><Button class="abilityButton">Submit</Button></td>
                         </tr>
                     </table>
                 </center>
@@ -77,29 +97,29 @@
             <center>
                 <div class="carta">
                     <div class="firstBox">
-                        <span class="name">Nombre</span>
-                        <span class="rarity">Rareza</span>
+                        <span class="name" id="inputNameCard">Nombre</span>
+                        <span class="rarity" id="inputRarityCard">Rareza</span>
                     </div>
-                    <img src="/assets/cardImages/kelsier.png" class="cardImage">
+                    <img src="/assets/cardImages/kelsier.png" class="cardImage" id="inputImageCard">
                     <div class="secondBox">
                         <div>
-                            <span class="race">Race</span> -
-                            <span class="cardClass">Class</span>
+                            <span class="race" id="inputRaceCard">Race</span> -
+                            <span class="cardClass" id="inputClassCard">Class</span>
                         </div>
-                        <img src="/assets/typeIcons/bendalloy.PNG" class="type">
+                        <img src="/assets/typeIcons/bendalloy.PNG" class="type" id="inputTypeCard">
                     </div>
                     <div class="abilities">
-                        <p>Lorem ipsum</p>
+                        <p id="inputAbilitiesCard">Lorem ipsum</p>
                     </div>
                     <div class="thirdBox">
                         <div class="thirdBoxMana">
-                            <img class="statIcon" src="../../assets/icons/mana.png"><span>0</span>
+                            <img class="statIcon" src="/assets/icons/mana.png"><span id="inputManaCard">0</span>
                         </div>
                         <div class="thirdBoxRight">
                             <span class="health"><img class="secondStat"
-                                    src="../../assets/icons/health.png"></span><span>0</span> /
+                                    src="/assets/icons/health.png"></span><span id="inputHealthCard">0</span> /
                             <span class="damage"><img class="secondStat"
-                                    src="../../assets/icons/damage.png"></span><span>0</span>
+                                    src="/assets/icons/damage.png"></span><span id="inputStrengthCard">0</span>
                         </div>
                     </div>
                     <div class="footer">
@@ -113,5 +133,4 @@
     </div>
     <!-- TERMINAN AMBAS SECCIONES-->
 </body>
-
 </html>

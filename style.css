@@ -155,6 +155,25 @@ input{
     color: #DFE1E3;
 }
 
+.abilityButton{
+    padding: 5px;
+    border: solid 3px #1CB3C8;
+    border-radius: 7px;
+    background-color: #3C415E;
+    color: #DFE1E3;
+    width: 40%;
+    margin-right: 2%;
+}
+
+select{
+    padding: 5px;
+    border: solid 3px #1CB3C8;
+    border-radius: 7px;
+    background-color: #3C415E;
+    color: #1CB3C8;
+    width: 100%;
+}
+
 ::placeholder{
     color: #1CB3C8;
 }
